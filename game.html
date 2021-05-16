@@ -25,20 +25,25 @@
         </header>
         <div class="page-main-1"><!--กำหนด class ที่มีชื่อว่า page-main-1 -->
             <br>
-            <ol id="scoreboard"> <!--กำหนด tag ol กำหนด id ที่มีชื่อว่า scoreboard-->
-                <li>Time Left: <span id="time">30</span></li>
-                <li><button onclick="startGame();" id="btn">Play</button></li>
-                <li>Score: <span id="score">0</span></li>
+            <ol id="scoreboard"> <!--กำหนด tag ol กำหนด id เป็น scoreboard-->
+                <li>Time Left: <span id="time">30</span></li> <!--กำหนด id ให้มีค่าเป็น time-->
+                <li><button onclick="startGame();" id="btn">Play</button></li><!--กำหนดปุ่ม Play เมื่อคลิกให้เรียกใช้งาน function startGame-->
+                <li>Score: <span id="score">0</span></li> <!--กำหนด id ให้มีค่าเป็น score-->
             </ol>
         
-            <div id="scene">
-                <img id="ground" src="images/ground.png" />
-                <img id="tree" src="images/tree.png" />
+            <div id="scene"><!--กำหนด id เป็น scene-->
+                <img id="ground" src="images/ground.png" /> <!--กำหนด tag img กำหนด id เป็น ground ทำการลิ้งที่อยู่รูปภาพ ground-->
+                <img id="tree" src="images/tree.png" /><!--กำหนด tag img กำหนด id เป็น tree ทำการลิ้งที่อยู่รูปภาพ tree-->
                 <img style="top: 250px ;left: 110px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
+    <!--กำหนด tag img กำหนด style แบบ in line เป็นการกำหนดตำแหน่งของ Apple  เมื่อทำการคริกจะเรียกใช้งาน function fallDown กำหนด class ที่มีชื่อว่า apple ทำการลิ้งที่อยู่รูปภาพ apple -->
                 <img style="top: 220px ;left: 145px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
+    <!--กำหนด tag img กำหนด style แบบ in line เป็นการกำหนดตำแหน่งของ Apple  เมื่อทำการคริกจะเรียกใช้งาน function fallDown กำหนด class ที่มีชื่อว่า apple ทำการลิ้งที่อยู่รูปภาพ apple -->
                 <img style="top: 260px ;left: 185px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
+    <!--กำหนด tag img กำหนด style แบบ in line เป็นการกำหนดตำแหน่งของ Apple  เมื่อทำการคริกจะเรียกใช้งาน function fallDown กำหนด class ที่มีชื่อว่า apple ทำการลิ้งที่อยู่รูปภาพ apple -->
                 <img style="top: 215px ;left: 220px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
+    <!--กำหนด tag img กำหนด style แบบ in line เป็นการกำหนดตำแหน่งของ Apple  เมื่อทำการคริกจะเรียกใช้งาน function fallDown กำหนด class ที่มีชื่อว่า apple ทำการลิ้งที่อยู่รูปภาพ apple -->
                 <img style="top: 250px ;left: 255px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
+    <!--กำหนด tag img กำหนด style แบบ in line เป็นการกำหนดตำแหน่งของ Apple  เมื่อทำการคริกจะเรียกใช้งาน function fallDown กำหนด class ที่มีชื่อว่า apple ทำการลิ้งที่อยู่รูปภาพ apple -->
             </div>
             <p style="width: 400px; margin: 0 auto;">High score: <span id="high">0</span></p>
           
