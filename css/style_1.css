@@ -60,9 +60,9 @@ a:hover{
     white-space: nowrap; /*กำหนด   white-space เป็น nowrap*/
 }
 
-.logo a,
-.toggle a{
-    font-size: 20px;
+.logo a, /*css ส่วนของ a ที่อยู่ใน clss logo*/
+.toggle a{ /*css ส่วนของ a ที่อยู่ใน clss toggle*/
+    font-size: 20px; /*กำหนด  font-size เป็น 20px*/
 }
 
 /*Mobile Menu*/
