@@ -23,12 +23,34 @@
             </ul>
             </nav>   
         </header>
-        <div class="page-main">
-            <div class="content">
-                <h1 class="text">Apple Game</h1>
-               
+        <div class="page-main-1">
+            <br>
+            <ol id="scoreboard">
+                <li>Time Left: <span id="time">30</span></li>
+                <li><button onclick="startGame();" id="btn">Play</button></li>
+                <li>Score: <span id="score">0</span></li>
+            </ol>
+        
+            <div id="scene">
+                <img id="ground" src="images/ground.png" />
+                <img id="tree" src="images/tree.png" />
+                <img style="top: 200px ;left: 110px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
+                <img style="top: 205px ;left: 145px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
+                <img style="top: 170px ;left: 185px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
+                <img style="top: 215px ;left: 220px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
+                <img style="top: 170px ;left: 255px;" onclick="fallDown(this)" class="apple" src="images/apple.png" />
             </div>
+            <p style="width: 400px; margin: 0 auto;">Hi: <span id="high">0</span></p>
           
+        </div>
+        <div class="page-main-2">
+            <br><br>
+             <div class="text-box">
+                 <h1>HOW TO PLAY</h1><br>
+                 <p>1.Press on the play button</p>
+                 <p>2.Press on the apple until the time out</p>
+                 <p>3.Check your score</p>
+             </div>
         </div>
         <footer class="page-footer">
             <div class="footer-content">
@@ -45,5 +67,6 @@
     </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
 <script src="script/scripts_Nav.js"></script> 
+<script src="script/scripts_game.js"></script> 
 </body>
 </html>
