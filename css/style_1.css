@@ -1,54 +1,63 @@
+
+/*ตั่ง css เบื้องต้น*/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;  /*กำหนด margin = 0*/
+    padding: 0; /*กำหนด padding = 0*/
+    box-sizing: border-box; /*กำหนด  box-sizing = border-box*/
+    font-family: 'Roboto Condensed', sans-serif;  /*กำหนด  font*/
 }
+/*ตั้ง css grid*/
 .grid{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: auto auto 200px;
-    grid-template-areas: 
+    display: grid; /*กำหนด display เป็น grid*/
+    grid-template-columns: 1fr ; /*กำหนด columns ของ grid ให้มีความกว้างเป็น 1fr*/
+    grid-template-rows: auto auto 200px; /*กำหนด ขนาด ของ grid ในแต่ละ row ให้ป็นดังนี้ rowที่ 1 = auto  rowที่ 2 = auto rowที่ 3 = 200px*/
+    grid-template-areas:  /*กำหนด areas grid ดังต่อไปนี้*/
         'header '
         'main '
         'footer ';
 }
-.page-header{
+.page-header{ /*กำหนด page-header เป็น grid-areas hearder*/
     grid-area: header;
 }
-.page-main{
+.page-main{ /*กำหนด page-main เป็น grid-areas main*/
     grid-area: main;
 }
-.page-footer{
+.page-footer{ /*กำหนด page-footer เป็น grid-areas footer*/
     grid-area: footer;
-    /*background-color: #46302B;*/
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f1f1f1;
+/*css ส่วนของ Body*/
+body{ 
+    font-family: Arial, Helvetica, sans-serif; /*กำหนด font*/
+    background: #f1f1f1; /*กำหนด สีพื้นหลัง*/
 }
+/*css ส่วนของ nav*/
 nav{
-    background:#222;
-    padding: 5px 20px;
+    background:#222; /*กำหนด สีพื้นหลัง*/
+    padding: 5px 20px; /*กำหนด padding toppadding 5px right padding 20px*/
 }
+/*css ส่วนของ ul*/
 ul{
     list-style-type: none; /*ทำการลบ list ตัวหน้าข้อความออก*/
 }
+/*css ส่วนของ a*/
 a{
-    color: white;
-    text-decoration: none;
+    color: white; /*กำหนด สีตัวหนังสือ*/
+    text-decoration: none; /*กำหนด  text-decoration เป็น none*/
 }
+/*css ส่วนของ a เมื่อมีการนำเมาส์มา hover ค้างไว้*/
 a:hover{
-    text-decoration: underline;
+    text-decoration: underline; /*กำหนด  text-decoration เป็น underline*/
 }
-.logo a:hover{
-    text-decoration: none;
+/*css ส่วนของ a ที่อยู่ใน clss logo เมื่อมีการนำเมาส์มา hover ค้างไว้*/
+.logo a:hover{ 
+    text-decoration: none; /*กำหนด  text-decoration เป็น none*/
 }
+/*css ส่วนของ li ที่อยู่ใน clss menu*/
 .menu li{
-    font-size: 16px;
-    padding: 15px 5px;
-    white-space: nowrap;
+    font-size: 16px;  /*กำหนด  font-size เป็น 16px*/
+    padding: 15px 5px; /*กำหนด padding toppadding 15px right padding 5px*/
+    white-space: nowrap; /*กำหนด   white-space เป็น nowrap*/
 }
 
 .logo a,
@@ -58,121 +67,122 @@ a:hover{
 
 /*Mobile Menu*/
 
-.menu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+.menu{/*css ส่วนของ clss menu*/
+    display: flex;  /*กำหนด  display เป็น flex*/
+    flex-wrap: wrap; /*กำหนดให้ flex item ภายใน flex Container มีการดันลงมาตามขนาดของ flex Container*/
+    justify-content: space-between; /*กำหนด   justify-content เป็น space-between*/
+    align-items: center; /*กำหนด   align-items เป็น center*/
 }
-.item{
-    width: 100%;
-    text-align: center;
-    display: none;
+.item{/*css ส่วนของ clss item*/
+    width: 100%; /*กำหนด  width เป็น 100*/
+    text-align: center; /*กำหนด  text-align เป็น center*/
+    display: none; /*กำหนด display เป็น none*/
 }
-.item.active{
-    display: block;
+.item.active{ /*css ส่วนของ clss active ที่อยู่ใน class item*/
+    display: block; /*กำหนด display เป็น block*/ 
 }
-.page-main{
+.page-main{/*css ส่วนของ clss page-main*/
     background-image: url("https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
-    background-color: red;
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    display: grid;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    opacity: 0.9;
+    /*กำหนด background-image รับค่าเป็น url */ 
+    background-color: red; /*กำหนด background-color เป็น red */ 
+    background-size: cover; /*กำหนด background-size เป็น cover */ 
+    background-position: center; /*กำหนด background-position เป็น center */ 
+    height: 70vh; /*กำหนด height เป็น 70vh */ 
+    display: grid;/*กำหนด display เป็น grid*/
+    text-align: center; /*กำหนด text-align เป็น center */ 
+    align-content: center; /*กำหนด align-content เป็น center */ 
+    justify-content: center; /*กำหนด   justify-content เป็น center */
+    opacity: 0.9;/*กำหนด opacity เป็น 0.9*/
 }
-.content{
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
+.content{ /*css ส่วนของ clss content*/
+    text-align: center;  /*กำหนด text-align เป็น center */ 
+    background-color: rgba(255, 255, 255, 0.7); /*กำหนด background-color เป็น 255 255 255 0.7 */ 
+    padding: 20px; /*กำหนด padding เป็น 20px */ 
 }
-button{
-    padding: 20px 50px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: 0px;
-    background: transparent;
-    position: relative;
-    margin: 20px;
-    transition: all 0.25s ease;
+button{ /*css ส่วนของ  button*/
+    padding: 20px 50px;  /*กำหนด padding top เป็น 20px  right เป็น 50px*/ 
+    font-size: 1.5rem; /*กำหนด font-size เป็น 1.5rem */ 
+    cursor: pointer; /*กำหนด cursor เป็น pointer */ 
+    border: 0px; /*กำหนด border เป็น 0px */ 
+    background: transparent; /*กำหนด background เป็น transparent */ 
+    position: relative; /*กำหนด position เป็น relative */ 
+    margin: 20px; /*กำหนด margin เป็น 20px */ 
+    transition: all 0.25s ease; /*กำหนด transition เป็น all  0.25s ease*/ 
 }
-.btn-1{
-    background: #000;
-    color: #fff;
-    border-radius: 30px;
-    transition: all 0.25s ease;
+.btn-1{ /*css ส่วนของ clss btn-1*/
+    background: #000; /*กำหนด background เป็น 000 */ 
+    color: #fff; /*กำหนด color เป็น fff */ 
+    border-radius: 30px ; /*กำหนด  border-radius เป็น 30px */ 
+    transition: all 0.25s ease; /*กำหนด transition เป็น all  0.25s ease*/ 
 }
-.btn-1:hover{
-    transform: translate(-12px,-12px);
+.btn-1:hover{ /*css ส่วนของ clss btn-1  เมื่อมีการนำเมาส์มา hover ค้างไว้*/
+    transform: translate(-12px,-12px); /*กำหนด transform เป็น ปรับตำแหน่ง x=-12px y=-12px*/ 
 }
 
-footer{
-    background: #111;
-    height: auto;
-    width: 100vw;
-    font-family: "Open Sans";
-    padding-top:40px ;
-    color: #fff;
+footer{  /*css ส่วนของ  footer*/
+    background: #111;  /*กำหนด background เป็น 111 */ 
+    height: auto;  /*กำหนด height เป็น auto */ 
+    width: 100vw; /*กำหนด width เป็น 100vw */ 
+    font-family: "Open Sans"; /*กำหนด font-family เป็น Open Sans */ 
+    padding-top:40px ; /*กำหนด padding-top เป็น 40px */ 
+    color: #fff; /*กำหนด color เป็น fff */ 
+} 
+.footer-content{ /*css ส่วนของ class footer-content*/
+    display: flex; /*กำหนด display เป็น flex */ 
+    align-items: center; /*กำหนด align-items เป็น center */ 
+    justify-content: center; /*กำหนด justify-content เป็น center */ 
+    flex-direction: column; /*กำหนด  flex-direction เป็น column */ 
+    text-align: center; /*กำหนดtext-align เป็น center */ 
 }
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+.footer-bottom{  /*css ส่วนของ class footer-bottom*/
+    background: #000; /*กำหนด background เป็น 000 */ 
+    width: 100vw; /*กำหนด width เป็น 100vw */ 
+    padding: 20px 0; /*กำหนด padding top เป็น 20px  right เป็น 0*/ 
+    text-align: center; /*กำหนดtext-align เป็น center */ 
 }
-.footer-bottom{
-    background: #000;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
+.footer-bottom p{ /*css ส่วนของ p ใน class footer-bottom*/
+    font-size: 14px; /*กำหนด  font-size เป็น 14px */ 
+    word-spacing: 2px;  /*กำหนด    word-spacing เป็น 2px */ 
+    text-transform: capitalize; /*กำหนด    text-transform เป็น capitalize */ 
 }
-.footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
+.footer-bottom span{ /*css ส่วนของ span ใน class footer-bottom*/
+    text-transform: uppercase; /*กำหนด    text-transform เป็น uppercase */ 
+    opacity: .4; /*กำหนด    opacity เป็น 0.4 */ 
+    font-weight: 200;/*กำหนด    font-weight เป็น 200 */ 
 }
 
 /*Tablate Menu*/
-@media all and (min-width: 600px){
-    .menu{
-        justify-content: center;
+@media all and (min-width: 600px){  /*ความกว้างหน้าจอ มากกว่า 600px*/
+    .menu{ /*css ส่วนของ class menu*/
+        justify-content: center; /*กำหนด   justify-content เป็น center */ 
     }
-    .logo{
-        flex: 1;
+    .logo{ /*css ส่วนของ class logo*/
+        flex: 1; /*กำหนด   flex เป็น 1 */ 
     }
-    .toggle{
-        flex: 1;
-        text-align: right;
+    .toggle{ /*css ส่วนของ class toggle*/
+        flex: 1; /*กำหนด   flex เป็น 1 */ 
+        text-align: right; /*กำหนด   text-align เป็น right */ 
     }
-    .page-main{
-        background-color: green;
+    .page-main{ /*css ส่วนของ class page-main*/
+        background-color: green;  /*กำหนด    background-color เป็น green */ 
     }
 }
 /*Desktop menu*/
-@media all and (min-width: 900px){
-    .item{
-        display: block;
-        width: auto;
+@media all and (min-width: 900px){ /*ความกว้างหน้าจอ มากกว่า 900px*/
+    .item{ /*css ส่วนของ class item*/
+        display: block; /*กำหนด    display เป็น block */ 
+        width: auto; /*กำหนด    width เป็น auto */ 
     }
-    .toggle{
-        display: none;
+    .toggle{ /*css ส่วนของ class toggle*/
+        display: none; /*กำหนด    display เป็น none */ 
     }
-    .logo{
-        order: 0;
+    .logo{ /*css ส่วนของ class logo*/
+        order: 0; /*กำหนด    order เป็น  0 */ 
     }
-    .item{
-        order: 1;
+    .item{ /*css ส่วนของ class item*/
+        order: 1; /*กำหนด    order เป็น  1 */ 
     }
-    .menu li{
-        padding: 15px 20px;
+    .menu li{  /*css ส่วนของ li ใน class menu*/
+        padding: 15px 20px; /*กำหนด padding toppadding 15px right padding 20px*/
     }
 }
