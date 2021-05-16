@@ -7,22 +7,17 @@
 .grid{
     display: grid;
     grid-template-columns: 1fr ;
-    grid-template-rows: auto 600px 300px 200px;
+    grid-template-rows: auto auto 200px;
     grid-template-areas: 
         'header '
         'main '
-        'main-2'
         'footer ';
 }
 .page-header{
     grid-area: header;
 }
-.page-main-1{
+.page-main{
     grid-area: main;
-}
-.page-main-2{
-    grid-area: main-2;
-    
 }
 .page-footer{
     grid-area: footer;
@@ -60,12 +55,7 @@ a:hover{
 .toggle a{
     font-size: 20px;
 }
-.page-main-1{
-    background-color: #ffeaa7;
-}
-.page-main-2{
-    background-color: #fdcb6e;
-}
+
 /*Mobile Menu*/
 
 .menu{
@@ -82,77 +72,49 @@ a:hover{
 .item.active{
     display: block;
 }
+.me h1{
+    text-align: center;
+    
+}
+.band{
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
 
-#scene {
-    width: 400px;
-    height: 400px;
-    background-color: #aaf;
-    overflow: hidden;
-    margin: 16px auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+.card{
+    min-height: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #444;
     position: relative;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1), -2px 2px 4px rgba(0, 0, 0, .1);
+    top: 0;
+    transition: all .1s ease-in;
+}
+.card:hover{
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
-#tree {
-    position: absolute;
-    display: block;
-    width: 200px;
-    bottom: 10px;
-    left: 100px;
+.card article{
+    padding: 20px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-#ground {
-    position: absolute;
-    display: block;
-    width: 400px;
-    bottom: 0;
+.card .thumb{
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center;
 }
-
-.apple {
-    position: absolute;
-    top: 225px;
-    left: 120px;
-    width: 50px;
-    height: auto;
-    transition: top .5s ease;
-}
-
-#scoreboard {
-    width: 400px;
-    margin: 4px auto;
-    padding: 0;
-    background-color: #eaeaea;
-}
-
-#scoreboard:after {
-    clear: both;
-    display: block;
-    content: " ";
-}
-
-#scoreboard li {
-    list-style: none;
-    box-sizing: border-box;
-    width: 33%;
-    padding: 4px;
-    text-align: center;
-    float: left;
-}
-.text-box{
-    text-align: center;
-    border: 5px solid red;
-}
-.text-box h1{
-    color: red;
-    font-size: 3em;
-    font-weight: bold;
-}
-.text-box p{
-    padding: 10px;
-    font-size: 1.6em;
-    font-weight: bold;
-}
-
 
 footer{
     background: #111;
@@ -198,7 +160,15 @@ footer{
         flex: 1;
         text-align: right;
     }
-
+    .band{
+        grid-template-columns: 1fr 1fr;
+    }
+    .item-1{
+        grid-column: 1/span 2;
+    }
+    .item-1 h1{
+        font-size: 30px;
+    }
 }
 /*Desktop menu*/
 @media all and (min-width: 900px){
@@ -218,4 +188,8 @@ footer{
     .menu li{
         padding: 15px 20px;
     }
+    .band{
+        grid-template-columns: repeat(5,1fr);
+    }
+
 }
