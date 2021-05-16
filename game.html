@@ -12,20 +12,20 @@
 <body>
     <div class="grid"><!--กำหนด class ที่มีชื่อว่า grid-->
         <header class="page-header"><!--กำหนด tag header กำหนด class ที่มีชื่อว่า page-header-->
-            <nav>
-            <ul class="menu"> 
-                <li class="logo"><a href="index.html">Apple Game</a></li>
-                <li class="item"><a href="index.html">Home</a></li>
-                <li class="item"><a href="game.html">Game</a></li>
-                <li class="item"><a href="about.html">About Me</a></li>
-                <li class="item"><a href="cradit.html">Cradit</a></li>
-                <li class="toggle"><a><i class="fas fa-bars"></i></a></li>
+            <nav><!--กำหนด tag nav-->
+            <ul class="menu"> <!--กำหนด tag ul กำหนด class ที่มีชื่อว่า menu-->
+                <li class="logo"><a href="index.html">Apple Game</a></li><!--กำหนด tag li กำหนด class ที่มีชื่อว่า logo จากนั้นทำการลิ้ง index.html-->
+                <li class="item"><a href="index.html">Home</a></li><!--กำหนด tag li กำหนด class ที่มีชื่อว่า item จากนั้นทำการลิ้ง index.html-->
+                <li class="item"><a href="game.html">Game</a></li><!--กำหนด tag li กำหนด class ที่มีชื่อว่า item จากนั้นทำการลิ้ง game.html-->
+                <li class="item"><a href="about.html">About Me</a></li><!--กำหนด tag li กำหนด class ที่มีชื่อว่า item จากนั้นทำการลิ้ง about.html-->
+                <li class="item"><a href="cradit.html">Cradit</a></li><!--กำหนด tag li กำหนด class ที่มีชื่อว่า item จากนั้นทำการลิ้ง cradit.html-->
+                <li class="toggle"><a><i class="fas fa-bars"></i></a></li><!--กำหนด tag li กำหนด class ที่มีชื่อว่า toggle จากนั้นทำการลิ้ง class fas fa-bars ทำการดึง icon มา-->
             </ul>
             </nav>   
         </header>
-        <div class="page-main-1">
+        <div class="page-main-1"><!--กำหนด class ที่มีชื่อว่า page-main-1 -->
             <br>
-            <ol id="scoreboard">
+            <ol id="scoreboard"> <!--กำหนด tag ol กำหนด id ที่มีชื่อว่า scoreboard-->
                 <li>Time Left: <span id="time">30</span></li>
                 <li><button onclick="startGame();" id="btn">Play</button></li>
                 <li>Score: <span id="score">0</span></li>
@@ -43,30 +43,30 @@
             <p style="width: 400px; margin: 0 auto;">High score: <span id="high">0</span></p>
           
         </div>
-        <div class="page-main-2">
+        <div class="page-main-2"> <!--กำหนด class ที่มีชื่อว่า page-main-2 -->
             <br><br>
-             <div class="text-box">
+             <div class="text-box"> <!--กำหนด class ที่มีชื่อว่า text-box -->
                  <h1>HOW TO PLAY</h1><br>
                  <p>1.Press on the play button</p>
                  <p>2.Press on the apple until the time out</p>
                  <p>3.Check your score</p>
              </div>
         </div>
-        <footer class="page-footer">
-            <div class="footer-content">
+        <footer class="page-footer"> <!--กำหนด tag footer กำหนด class ที่มีชื่อว่า page-footer-->
+            <div class="footer-content"><!--กำหนด class ที่มีชื่อว่า footer-content-->
                 <h3>APPLE GAME</h3><br>
                 <p>
                     Apple game is a game that we will have to keep apples,before the time runs out.<br>
                     Let's see how many apple you can get.
                 </p><br><br><br>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom"> <!--กำกำหนด class ที่มีชื่อว่า footer-bottom-->
                 <p>Designed by <span>Peeraphon Sayyot</span></p>
             </div>
         </footer>
     </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
-<script src="script/scripts_Nav.js"></script> 
-<script src="script/scripts_game.js"></script> 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    <!--ลิ้งส่วน script นำ jquery เข้ามาใช้งานในส่วนของ nav-->
+<script src="script/scripts_Nav.js"></script> <!--ลิ้ง script ส่วน Nav-->
+<script src="script/scripts_game.js"></script> <!--ลิ้ง script ส่วน game-->
 </body>
 </html>
