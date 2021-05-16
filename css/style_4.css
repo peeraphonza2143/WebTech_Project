@@ -7,7 +7,7 @@
 .grid{
     display: grid;
     grid-template-columns: 1fr ;
-    grid-template-rows: auto auto 200px;
+    grid-template-rows: auto 800px 200px;
     grid-template-areas: 
         'header '
         'main '
